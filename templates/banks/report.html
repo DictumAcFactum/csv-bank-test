@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create report</title>
+</head>
+<body>
+<form action="." method="post" enctype="multipart/form-data">{% csrf_token %}
+  <label for="fname">Вesired data type:</label><br>
+  <select name="data_type">
+    {% for data_type in data_types %}
+    <option value="{{ data_type.0 }}">{{ data_type.1 }}</option>
+    {% endfor %}
+  </select><br><br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
