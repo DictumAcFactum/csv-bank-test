@@ -6,7 +6,7 @@
 </head>
 <body>
 <form action="." method="post" enctype="multipart/form-data">{% csrf_token %}
-  <label for="fname">Вesired data type:</label><br>
+  <label for="fname">Desired data type:</label><br>
   <select name="data_type">
     {% for data_type in data_types %}
     <option value="{{ data_type.0 }}">{{ data_type.1 }}</option>
